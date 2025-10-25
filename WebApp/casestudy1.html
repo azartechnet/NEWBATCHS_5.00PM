@@ -1,0 +1,72 @@
+<style>
+body
+{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(217, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10%;
+}
+.dashboard
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    padding: 40px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgb(0, 0, 0,0.2);
+}
+.card
+{
+    background-color: #fff;
+    width: 260px;
+    border-radius: 15px;
+    padding:20px;
+    box-shadow: 0 5px 15px rgb(0, 0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+.card:hover
+{
+    z-index: 10;
+    box-shadow: 0 10px 25px rgb(0, 0, 0,0.3);
+}
+.card .name
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0,0.2);
+}
+.card .role
+{
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.card .bio
+{
+    font-size: 0.9rem;
+    height: 80px;
+    overflow-y: auto;
+    line-height: 1.4;
+    padding-right: 5px;
+}
+</style>
+<body>
+    <div class="dashboard">
+        <div class="card">
+          <img src="images/b1.jpeg" width="50%" height="50%">
+
+          <div class="name">Mohamed Azarudeen</div>
+          <div class="role">UI Design</div>
+          <div class="bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt ipsa veniam quod delectus ea nostrum eum iste fugiat odit! Quam eligendi hic numquam qui odit culpa, rem minus molestias?
+          </div>
+        </div>
+    </div>
+</body>
