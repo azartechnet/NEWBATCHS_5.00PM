@@ -1,0 +1,32 @@
+<style>
+    #borderimg
+    {
+        border:10px solid transparent;
+        padding: 15px;
+        /* border-image: url(images/b1.jpeg) 30 round; */
+         /* border-image: url(images/b1.jpeg) 30 stretch; */
+          /* border-image: url(images/b1.jpeg) 50 round; */
+           border-image: url(images/b1.jpeg) 20% round;
+           border-image-slice: 30%;
+           border-image-width: 10px;
+          
+           
+    }
+    h2
+    {
+         border-inline: 5px solid red;
+    }
+    h3
+    {
+        border-inline: 4px dotted blue;
+    }
+    div
+    {
+        border-inline:double;
+    }
+</style>
+<p id="borderimg">This is Image border</p>
+<img src="images/b1.jpeg" alt="">
+<h2>This is Heading-2</h2>
+<h3>This is Heading-3</h3>
+<div>This is div tag</div>
