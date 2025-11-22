@@ -153,6 +153,55 @@
         color:red;
         font-weight: bold;
     }
+    /*footer*/
+    footer
+    {
+        background: #222;
+        color:#ddd;
+        padding:40px 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    footer h4
+    {
+        margin-bottom: 15px;
+        color:#fff;
+    }
+    footer ul
+    {
+        list-style: none;
+    }
+    footer ul li
+    {
+        margin-bottom: 8px;
+    }
+    footer ul li a
+    {
+        text-decoration: none;
+        color:#ddd;
+        font-size: 14px;
+    }
+    footer .subscribe
+    {
+        margin-top: 20px;
+    }
+    footer input
+    {
+        padding:8px;
+        border-radius: 5px;
+        border:none;
+        margin-right: 5px;
+    }
+    footer button
+    {
+        padding:8px 15px;
+        background: #5cb85c;
+        border: none;
+        color:#fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
     /*Media query*/
       @media (max-width:768px)
       {
@@ -176,6 +225,11 @@
       .categories-container
       {
         flex-direction: column;
+      }
+      footer
+      {
+        flex-direction: column;
+        text-align: center;
       }
     }
 </style>
@@ -245,3 +299,38 @@
       </div>
     </div>
 </section>
+ <!-- Footer -->
+  <footer>
+    <div>
+      <h4>Zay Shop</h4>
+      <ul>
+        <li>123 Consectetur at ligula 10660</li>
+        <li>010-020-0340</li>
+        <li>info@company.com</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#">Luxury</a></li>
+        <li><a href="#">Sport Wear</a></li>
+        <li><a href="#">Men’s Shoes</a></li>
+        <li><a href="#">Women’s Shoes</a></li>
+        <li><a href="#">Popular Dress</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Further Info</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Shop Locations</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+      <div class="subscribe">
+        <input type="email" placeholder="Email address">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
