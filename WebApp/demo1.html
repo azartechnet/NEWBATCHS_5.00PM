@@ -1,0 +1,19 @@
+<style>
+.box {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    position: relative;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+    bottom: -40px;
+    left: 30px;
+}
+</style>
+<div class="box"></div>
