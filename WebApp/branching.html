@@ -1,0 +1,19 @@
+<body>
+    <h1 id="d1"></h1>
+    <script>
+        var age=prompt("Enter your age:");
+        if(age<18)
+        {
+            document.getElementById("d1").innerHTML="You are a minor.";
+        }
+        else if(age>=18 && age<60)
+        {
+            document.getElementById("d1").innerHTML="You are an adult.";
+            
+        }
+        else
+        {
+            document.getElementById("d1").innerHTML="You are a senior citizen.";
+        }
+    </script>
+</body>
