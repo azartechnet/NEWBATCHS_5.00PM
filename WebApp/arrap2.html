@@ -1,0 +1,46 @@
+<!-- toString()
+at()
+join()
+pop()
+push()
+shift()
+unshift()
+delete()
+concat()
+copyWithin()
+flat()
+splice()
+toSpliced()
+slice()
+fill() -->
+<script>
+      var empname=["John","Smith","David","Peter","Aaron"];
+        document.write(empname.toString());
+        document.write("<br>");
+        document.write(empname.join(" - "));
+        document.write("<br>");
+        empname.pop();
+        document.write(empname.join(", "));
+        document.write("<br>");
+        empname.push("Michael");
+        document.write(empname.join(", "));
+        document.write("<br>");
+        empname.shift();
+        document.write(empname.join(", "));
+        document.write("<br>");
+        empname.unshift("Emma");
+        document.write(empname.join(", "));
+        document.write("<br>");
+        delete empname[2];
+        document.write(empname.join(", "));
+        document.write("<br>");
+        var newEmp=empname.concat(["Olivia","Liam"]);
+        document.write(newEmp.join(", "));
+        document.write("<br>");
+        var copiedEmp=newEmp.copyWithin(1,3,5);
+        document.write(copiedEmp.join(", "));
+        document.write("<br>");
+        
+        
+
+</script>

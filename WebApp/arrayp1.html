@@ -1,0 +1,13 @@
+<p id="demo"></p>
+<script>
+    var empname=["John","Smith","David","Peter","Aaron"];
+    document.write(empname[2]);
+    document.write("<br>");
+    document.write(empname.length);
+    //display all data
+    document.write("<br>");
+    for(var i=0;i<empname.length;i++){
+        document.write(empname[i]+"<br>");
+    }
+    document.getElementById("demo").innerHTML=empname;
+</script>
