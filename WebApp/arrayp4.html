@@ -1,0 +1,27 @@
+<!--
+sort()
+reverse()
+toSorted()
+toReversed()
+min()
+max()
+-->
+<script>
+        var empname=["John","Smith","David","Peter","Aaron"];
+            var sortedNames = empname.slice().sort();
+            document.write("Sorted Names: " + sortedNames.join(", "));
+            document.write("<br>");
+            
+            var reversedNames = empname.slice().reverse();
+            document.write("Reversed Names: " + reversedNames.join(", "));
+            document.write("<br>");
+            
+            
+            
+            var numbers = [34, 7, 23, 32, 5, 62];
+            var minNumber = Math.min(...numbers);
+            var maxNumber = Math.max(...numbers);
+            document.write("Minimum Number: " + minNumber);
+            document.write("<br>");
+            document.write("Maximum Number: " + maxNumber);
+</script>

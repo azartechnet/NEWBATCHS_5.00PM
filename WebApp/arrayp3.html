@@ -1,0 +1,41 @@
+<!--
+indexOf()
+lastIndexOf()
+includes()
+find()
+findIndex()
+findLast()
+findLastIndex()
+-->
+<script>
+        var empname=["John","Smith","David","Peter","Aaron","David"];
+            document.write("Index of David: " + empname.indexOf("David"));
+            document.write("<br>");
+            document.write("Last Index of David: " + empname.lastIndexOf("David"));
+            document.write("<br>");
+            document.write("Includes Peter: " + empname.includes("Peter"));
+            document.write("<br>");
+            
+            var foundName = empname.find(function(name) {
+            return name.startsWith("A");
+            });
+            document.write("First name starting with A: " + foundName);
+            document.write("<br>");
+            
+            var foundIndex = empname.findIndex(function(name) {
+            return name.length > 4;
+            });
+            document.write("Index of first name longer than 4 characters: " + foundIndex);
+            document.write("<br>");
+            
+            var foundLastName = empname.findLast(function(name) {
+            return name.startsWith("D");
+            });
+            document.write("Last name starting with D: " + foundLastName);
+            document.write("<br>");
+            
+            var foundLastIndex = empname.findLastIndex(function(name) {
+            return name.length === 5;
+            });
+            document.write("Index of last name with 5 characters: " + foundLastIndex);
+</script>
