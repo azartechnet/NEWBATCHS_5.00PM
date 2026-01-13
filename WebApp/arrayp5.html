@@ -1,0 +1,51 @@
+<!--
+forEach()
+map()
+flatMap()
+filter()
+entries()
+keys()
+spread(...)
+-->
+<script>
+        var empname=["John","Smith","David","Peter","Aaron"];
+        
+        document.write("Employee Names using forEach():<br>");
+        empname.forEach(function(name) {
+            document.write(name + "<br>");
+        });
+        
+        var nameLengths = empname.map(function(name) {
+            return name.length;
+        });
+        document.write("Name Lengths using map(): " + nameLengths.join(", "));
+        document.write("<br>");
+        
+        var nestedArray = [[1, 2], [3, 4], [5, 6]];
+        var flatArray = nestedArray.flatMap(function(arr) {
+            return arr;
+        });
+        document.write("Flattened Array using flatMap(): " + flatArray.join(", "));
+        document.write("<br>");
+        
+        var longNames = empname.filter(function(name) {
+            return name.length > 4;
+        });
+        document.write("Filtered Names (length > 4) using filter(): " + longNames.join(", "));
+        document.write("<br>");
+        
+        var empEntries = empname.entries();
+        document.write("Employee Entries using entries():<br>");
+        for (let [index, name] of empEntries) {
+            document.write(index + ": " + name + "<br>");
+        }
+        
+        var empKeys = empname.keys();
+        document.write("Employee Keys using keys():<br>");
+        for (let key of empKeys) {
+            document.write(key + "<br>");
+        }
+        
+        var spreadNames = [...empname];
+        document.write("Employee Names using spread(...): " + spreadNames.join(", "));
+</script>
