@@ -1,0 +1,11 @@
+<body>
+    <p id="myp1" onmousedown="mouseDown()" onmouseup="mouseUp()">Click and hold the mouse button down on this paragraph.</p>
+    <script>
+        function mouseDown() {
+            document.getElementById("myp1").style.color = "red";
+        }
+        function mouseUp() {
+            document.getElementById("myp1").style.color = "blue";
+        }
+    </script>
+</body>

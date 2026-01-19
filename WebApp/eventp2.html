@@ -1,0 +1,20 @@
+<body>
+    <form>
+        Enter the value is:: <input type="text" id="fname" onblur="myfun()" required>
+    </form>
+    <p id="demo"></p>
+    <script>
+        function myfun()
+        {
+            var x=document.getElementById("fname").value;
+            if(x=="")
+            {
+                document.getElementById("demo").innerHTML="You must fill out this field";
+            }
+            else
+            {
+                document.getElementById("demo").innerHTML="";
+            }
+        }
+    </script>
+</body>
