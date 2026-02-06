@@ -1,0 +1,13 @@
+<h1 id="demo"></h1>
+<script>
+    let numbers=new Set([1,2,3,4,5]);
+    console.log(numbers);
+    numbers.add(6);
+    numbers.add(7);
+    numbers.add(8);
+    numbers.add(8);//duplicate value will not be added
+    console.log(numbers);
+    numbers.delete(4);
+    console.log(numbers);
+    document.getElementById("demo").innerHTML=Array.from(numbers);
+</script>

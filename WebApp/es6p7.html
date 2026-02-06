@@ -1,0 +1,28 @@
+<!-- <script>
+    //check elemenet is exist or not
+    let data=new Set([1,2,3,4,5]);
+    console.log(data.has(3));
+    console.log(data.has(6));
+    console.log(data.size);
+    data.clear();
+    console.log(data.size);
+</script> -->
+
+<script>
+    //Looping through set
+    let data=new Set([1,2,3,4,5]);
+    for(let x of data){
+        console.log(x);
+    }
+</script>
+
+<script>
+    //remove duplicate values from array
+    let numbers=[1,2,3,4,5,1,2,3,4,5];
+    let uniqueNumbers=[...new Set(numbers)];
+    console.log(uniqueNumbers);
+</script>
+
+//Task 1: Create a set of 5 employee names and display them in the console.
+//Task 2: Create a set of 5 numbers and find the maximum value using the spread operator.
+//Task 3: Create a set of 5 strings and check if a specific string exists in the set.
