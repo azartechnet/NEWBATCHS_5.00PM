@@ -1,0 +1,18 @@
+<p id="d1"></p>
+<script>
+    //oops concepts in es6
+    class Employee
+    {
+        constructor(name, age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        display()
+        {
+            return "Name: "+this.name+", Age: "+this.age;
+        }
+    }
+    const my1=new Employee("John",30);
+    document.getElementById("d1").innerHTML=my1.display();
+</script>
