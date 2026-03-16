@@ -334,7 +334,7 @@ r1.render(<Football isGoal={Math.random()>0.5}/>)*/
 
 //using class
 
-class Football extends React.Component {
+/*class Football extends React.Component {
   render() {
     const f = this.props.isGoal;
     if (f) {
@@ -346,5 +346,63 @@ class Football extends React.Component {
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Football isGoal={Math.random()>0.5}/>)
+r1.render(<Football isGoal={Math.random()>0.5}/>)*/
 
+//Event using form
+
+/*function MyForm()
+{
+  const hs=()=>{
+    alert("Form Submitted")
+  }
+  return(
+    <div>
+      <form onSubmit={hs}>
+        <input type="text" placeholder="Enter the name"/>
+        <input type="submit" value="submit"/>
+      </form>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<MyForm/>)*/
+
+//React List using Map
+
+/*function MyList()
+{
+  const items=["item1","item2","item3","item4"]
+  return(
+    <div>
+      <h1>MyList</h1>
+      <ul>
+        {items.map((item,index)=>(
+          <li key={index}>{item}{index}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<MyList/>)*/
+
+//Using class Above Program--Task
+
+//React List using Map with props
+
+function MyList(props)
+{
+  const items=props.items;
+  return(
+    <div>
+      <h1>MyList</h1>
+      <ul>
+        {items.map((item,index)=>(
+          <li>{item}<br/>{index}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<MyList items={["item1","item2","item3","item4"]}/>)
