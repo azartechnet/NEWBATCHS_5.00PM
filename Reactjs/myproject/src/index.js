@@ -390,7 +390,7 @@ r1.render(<MyList/>)*/
 
 //React List using Map with props
 
-function MyList(props)
+/*function MyList(props)
 {
   const items=props.items;
   return(
@@ -405,4 +405,5 @@ function MyList(props)
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-r1.render(<MyList items={["item1","item2","item3","item4"]}/>)
+r1.render(<MyList items={["item1","item2","item3","item4"]}/>)*/
+
