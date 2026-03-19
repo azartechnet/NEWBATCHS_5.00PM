@@ -407,3 +407,103 @@ r1.render(<MyList/>)*/
 const r1=ReactDOM.createRoot(document.getElementById("root"))
 r1.render(<MyList items={["item1","item2","item3","item4"]}/>)*/
 
+//destructuring
+
+/*function Welcome({name,age})
+{
+  return(
+    <div>
+      <h1>Hello,{name}</h1>
+      <p>Your age is::{age}</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))4
+r1.render(<Welcome name="Azar" age={20}/>)*/
+
+//Destructuring in class component with state
+
+/*class Sample extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={name:"azar",age:30}
+  }
+  render()
+  {
+    const {name,age}=this.state;
+    return(
+      <div>
+        <h1>Hello,{name}</h1>
+        <p>Your age is::{age}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Sample/>)*/
+
+//Destructuring in Array
+
+/*function Skills()
+{
+  const skills=["azar","mohamed","raja","prakash"];
+  const [a1,a2,a3,a4]=skills;
+  return(
+    <div>
+      <h1>MySkills</h1>
+      <ul>
+        <li>{a1}</li>
+        <li>{a2}</li>
+        <li>{a3}</li>
+        <li>{a4}</li>
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Skills/>)*/
+
+
+/*class MyComponent extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    console.log("Constructor called")
+  }
+  componentDidMount()
+  {
+    console.log("Component Did Mouned")
+  }
+  render()
+  {
+    console.log("Render Methods")
+    return(
+      <div>
+        MyComponent
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyComponent/>)*/
+
+//Unmounting
+
+class Child extends React.Component
+{
+  componentWillUnmount()
+  {
+    console.log("welcome")
+  }
+  render()
+  {
+    return(
+      <h1>Child Component</h1>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Child/>)
