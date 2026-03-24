@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from 'react-dom/client';
 
 //Basic Rendering
@@ -492,7 +492,7 @@ r1.render(<MyComponent/>)*/
 
 //Unmounting
 
-class Child extends React.Component
+/*class Child extends React.Component
 {
   componentWillUnmount()
   {
@@ -506,4 +506,48 @@ class Child extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Child/>)
+r1.render(<Child/>)*/
+
+//Updating
+
+/*class Counter extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={count:0}
+  }
+  componentDidUpdate(preState)
+  {
+    console.log("ComponentUpdated...")
+    console.log("PreviousCount::",preState.count);
+    console.log("CurrentCount::",this.state.count);
+  }
+  render()
+  {
+    return(
+      <>
+       <h2>Count::{this.state.count}</h2>
+       <button onClick={()=>this.setState({count:this.state.count+1})}>Increment</button>
+      </>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//React Hooks useState()
+
+function Counter()
+{
+  const [count,setCount]=useState(0);
+  return(
+    <div>
+      <h1>Count::{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+        <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
