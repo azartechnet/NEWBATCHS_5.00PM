@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
 
 //Basic Rendering
@@ -538,7 +538,7 @@ r1.render(<Counter/>)*/
 
 //React Hooks useState()
 
-function Counter()
+/*function Counter()
 {
   const [count,setCount]=useState(0);
   return(
@@ -550,4 +550,101 @@ function Counter()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Counter/>)
+r1.render(<Counter/>)*/
+
+//useEffect
+
+/*function Example()
+{
+  const [count,setCount]=useState(0);
+  useEffect(()=>{
+    console.log("ComponentRender or updated")
+  })
+  return(
+    <div>
+      <p>Count:{count}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Example/>)*/
+
+//Example 2
+
+/*const Example2=()=>{
+  useEffect(()=>{
+    const timer=setInterval(()=>{
+      console.log("Timer is Running..")
+    },1000)
+    return()=>{
+      clearInterval(timer)
+      console.log("Timecleared")
+    }
+  })
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Example2/>)*/
+
+//React without useContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("mohamed");
+  return(
+    <div>
+      <h1>UserName is::{user}</h1>
+      <button onClick={()=>setUser("azar")}>ClickHere</button>
+      <Component2/>
+    </div>
+  )
+}
+function Component2()
+{
+  return(
+    <div>
+      <h1>UserName::{props.user}</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+import { useContext,createContext } from "react";
+const UserContext=createContext();
+
+function Component1()
+{
+  const [user,setUser]=useState("mohamed");
+  return(
+    <UserContext.Provider value={user}>
+      
+      <h1>This is Component1 is::{user}</h1>
+
+      <Component2/>
+
+    </UserContext.Provider>
+  )
+}
+function Component2()
+{
+  const user=useContext(UserContext);
+
+  return(
+    <div>
+      <h1>Component2 is::{user}</h1>
+      <Component3/>
+    </div>
+  )
+}
+function Component3()
+{
+  const user=useContext(UserContext);
+  return(
+    <div>
+      <h1>Component3 is::{user}</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)
