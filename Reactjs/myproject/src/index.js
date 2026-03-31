@@ -610,7 +610,7 @@ function Component2()
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Component1/>)*/
 
-import { useContext,createContext } from "react";
+/*import { useContext,createContext } from "react";
 const UserContext=createContext();
 
 function Component1()
@@ -647,4 +647,53 @@ function Component3()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Component1/>)
+r1.render(<Component1/>)*/
+
+//useRef
+
+/*import { useRef } from "react";
+
+function FocusInput()
+{
+  const inputRef=useRef(null);
+  const handleClick=()=>{
+    inputRef.current.focus();
+  }
+  return(
+    <div>
+      <input type="text" ref={inputRef} placeholder="Enter your name"/>
+      <button onClick={handleClick}>Focus Input</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<FocusInput/>)*/
+
+import { useReducer } from "react";
+
+//Reducer function
+function reducer(state,action)
+{
+  switch(action.type)
+  {
+    case 'increment':
+      return {count:state.count+1};
+    case 'decrement':
+      return {count:state.count-1};
+    default:
+      return state;
+  }
+}
+function Counter()
+{
+  const [state,dispatch]=useReducer(reducer,{count:0});
+  return(
+    <div>
+      <h1>Count::{state.count}</h1>
+      <button onClick={()=>dispatch({type:'increment'})}>Increment</button>
+      <button onClick={()=>dispatch({type:'decrement'})}>Decrement</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
