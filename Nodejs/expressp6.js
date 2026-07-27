@@ -23,9 +23,10 @@ r1.get('/', (req, res) => {
 });
 
 // GET: Fetch a single user by ID (e.g., /users/42)
-r1.get('/:id', (req, res) => {
+r1.post('/:id', (req, res) => {
   const userId = req.params.id;
-  res.json({ id: userId, name: 'Alex', email: 'alex@example.com' });
+const { name, email } = req.body;
+  res.json({ id: userId, user: { name, email }  });
 });
 
 // POST: Create a new user
