@@ -1,0 +1,7 @@
+<p id="demo"></p>
+<script>
+    const txt='{"name":"azar","age":"function(){return 30;}","city":"cairo","birthdate":"1993-01-01"}';
+    const obj=JSON.parse(txt)
+    obj.age=eval("("+obj.age+")")
+    document.getElementById("demo").innerHTML=obj.age;
+</script>

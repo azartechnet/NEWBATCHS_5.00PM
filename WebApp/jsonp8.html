@@ -1,0 +1,11 @@
+<p id="demo"></p>
+<script>
+    const student={
+        name:"azar",
+        age:30,
+        city:"karur"
+    }
+    localStorage.setItem("s1",JSON.stringify(student))
+    const rs=JSON.parse(localStorage.getItem("s1"))
+    document.getElementById("demo").innerHTML=rs.name+","+rs.age+","+rs.city
+</script>
