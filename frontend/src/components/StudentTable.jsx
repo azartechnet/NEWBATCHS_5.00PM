@@ -10,6 +10,10 @@ function StudentTable({ setEditStudent })//changes
     useEffect(()=>{
         loadStudents();
     },[])
+     const handleDelete = async (id) => {
+        await api.delete(`/students/${id}`);
+        loadStudents();
+    };
     return(
         <div className="container mt-4">
             <h2>StudentList</h2>
@@ -33,7 +37,7 @@ function StudentTable({ setEditStudent })//changes
                                 {/* changes */}
                                 <td>
                                     <button className="btn btn-warning btn-sm" onClick={()=>setEditStudent(student)}>Edit</button>
-                                    
+                                     <button className="btn btn-danger btn-sm" onClick={() => handleDelete(student._id)}>Delete</button>
                                 </td>
                             </tr>
                         ))
